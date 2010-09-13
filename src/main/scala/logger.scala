@@ -131,7 +131,7 @@ trait Logger {
   /**
    * The wrapped SLF4J Logger.
    */
-  protected val slf4jLogger: SLF4JLogger
+   val slf4jLogger: SLF4JLogger
 }
 
-private[slf4s] class DefaultLogger(override protected val slf4jLogger: SLF4JLogger) extends Logger
+private[slf4s] class DefaultLogger(override val slf4jLogger: SLF4JLogger) extends Logger

@@ -21,4 +21,9 @@ package object slf4s {
     require(slf4jLogger != null, "slf4jLogger must be not null!")
     Logger(slf4jLogger.getName)
   }
+  
+  implicit def toLogger(logger: Logger): SLF4JLogger = {
+    logger.slf4jLogger
+  }
+  
 }
